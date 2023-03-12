@@ -8,7 +8,7 @@
 }
 
 .s-wrapper .s-left-column {
-    width: 100%;
+    width: 100px;
     height: 100%;
     background-color: black;
     display: flex;
@@ -16,9 +16,30 @@
     align-items: center;
 }
 
-.s-wrapper .s-main-column {
+.s-wrapper .s-main-content {
     width: 100%;
     height: 100%;
     background-color: grey;
     padding-left: 30px;
+}
+
+.navigator {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.navigator ul li{
+    margin-top: 60px 0;
+}
+
+.navigator ul li:first-child{
+    margin-top: 0;
+}
+
+.navigator ul li:last-child{
+    margin-bottom: 0;
 }
