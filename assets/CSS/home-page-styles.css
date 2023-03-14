@@ -42,6 +42,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    perspective: 3000px;
 }
 
 .s-card {

@@ -1,6 +1,5 @@
 .gallery {
     margin: 20px;
-    margin-left: 0;
     padding-left: 0;
 }
 
@@ -19,5 +18,4 @@
 .gallery ul li a img {
     border: 6px solid white;
     border-radius: 15px;
-    height: 120px;
 }
