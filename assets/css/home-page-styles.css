@@ -1,4 +1,4 @@
-@import url('../css/reset.css');
+@import url('../css/reset.css   ');
 @import url('../css/global.css');
 
 body {
@@ -111,6 +111,13 @@ body::before {
 
 .s-controller__button:nth-child(2) {
     margin: 0 3.75rem;
+}
+
+.s-controller__button--active {
+    background-color: white;
+    color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+    outline: 0.125rem solid white;
 }
 
 .s-controller__line {
