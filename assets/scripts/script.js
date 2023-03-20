@@ -1,4 +1,4 @@
-function handleMouseEnter() {  
+function handleMouseEnter() {
     this.classList.add('s-card--hovered');
     document.body.id = `${this.id}-hovered`;
 }
@@ -11,7 +11,7 @@ function handleMouseLeave() {
 function addEventListenersToCards() {
     const cardElements = document.getElementsByClassName('s-card');
 
-    for(let index = 0; index < cardElements.length; index++) {
+    for (let index = 0; index < cardElements.length; index++) {
         const card = cardElements[index];
         card.addEventListener('mouseenter', handleMouseEnter)
         card.addEventListener('mouseleave', handleMouseLeave)
@@ -20,6 +20,17 @@ function addEventListenersToCards() {
 
 document.addEventListener("DOMContentLoaded", addEventListenersToCards, false);
 
-function selectCarrousselItem(selectedItem) {
-    console.log('Selecionando item', selectedItem);
+function selectCarrousselItem(selectedButtonElement) {
+    const selectedItem = selectedButtonElement.id
+    const carroussel = document.querySelector('.s-cards-carroussel')
+    const transform = carroussel.style.transform;
+    const rotateY = transform.match(/rotateY\((-?\d+deg)\)/i);
+    const rotateYdeg = -120 * (Number(selectedItem) - 1);
+    const newTransform = transform.replace(rotateY[0], `rotateY(${rotateYdeg}deg)`)
+
+    carroussel.style.transform = newTransform;
+
+    const activeButtonElement = document.querySelector('.s-controller__button--active');
+    activeButtonElement.classList.remove('s-controller__button--active');
+    selectedButtonElement.classList.add('s-controller__button--active')
 }
